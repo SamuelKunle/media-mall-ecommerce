@@ -4,7 +4,7 @@ import Link from "next/link";
 const PromoSection = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-      <Link href="/category/laptops" className="product-card p-5 flex flex-col gap-3 group cursor-pointer gradient-hero text-primary-foreground">
+      <Link href="/category/laptops" className="product-card p-5 flex flex-col gap-3 group cursor-pointer gradient-hero text-primary-foreground shadow-sm hover:shadow-md transition-shadow duration-200">
         <div className="w-10 h-10 rounded-xl bg-primary-foreground/20 flex items-center justify-center">
           <GraduationCap className="w-5 h-5" />
         </div>
@@ -17,7 +17,7 @@ const PromoSection = () => {
         </span>
       </Link>
 
-      <Link href="/b2b" className="product-card p-5 flex flex-col gap-3 group cursor-pointer bg-card">
+      <Link href="/b2b" className="product-card p-5 flex flex-col gap-3 group cursor-pointer bg-card shadow-sm hover:shadow-md transition-shadow duration-200">
         <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
           <Building2 className="w-5 h-5 text-primary" />
         </div>
@@ -30,7 +30,7 @@ const PromoSection = () => {
         </span>
       </Link>
 
-      <Link href="/trade-in" className="product-card p-5 flex flex-col gap-3 group cursor-pointer bg-card">
+      <Link href="/trade-in" className="product-card p-5 flex flex-col gap-3 group cursor-pointer bg-card shadow-sm hover:shadow-md transition-shadow duration-200">
         <div className="w-10 h-10 rounded-xl bg-success/10 flex items-center justify-center">
           <RefreshCw className="w-5 h-5 text-success" />
         </div>
@@ -43,7 +43,7 @@ const PromoSection = () => {
         </span>
       </Link>
 
-      <Link href="/warranty" className="product-card p-5 flex flex-col gap-3 group cursor-pointer bg-card">
+      <Link href="/warranty" className="product-card p-5 flex flex-col gap-3 group cursor-pointer bg-card shadow-sm hover:shadow-md transition-shadow duration-200">
         <div className="w-10 h-10 rounded-xl bg-warning/10 flex items-center justify-center">
           <Wrench className="w-5 h-5 text-warning" />
         </div>

@@ -135,11 +135,11 @@ const ProductCard = ({ product, variant = "grid" }: ProductCardProps) => {
             >
               <ShoppingCart className="w-3.5 h-3.5" /> {purchasable ? "Add to Cart" : "Out of stock"}
             </button>
-            <button onClick={(e) => e.preventDefault()} className="p-2 rounded-lg border border-border hover:bg-secondary transition-colors">
-              <Heart className="w-3.5 h-3.5 text-foreground" />
+            <button type="button" aria-label={`Save ${product.name} to wishlist`} onClick={(e) => e.preventDefault()} className="p-2 rounded-lg border border-border hover:bg-secondary transition-colors">
+              <Heart className="w-3.5 h-3.5 text-foreground" aria-hidden />
             </button>
-            <button onClick={(e) => e.preventDefault()} className="p-2 rounded-lg border border-border hover:bg-secondary transition-colors">
-              <BarChart2 className="w-3.5 h-3.5 text-foreground" />
+            <button type="button" aria-label={`Compare ${product.name}`} onClick={(e) => e.preventDefault()} className="p-2 rounded-lg border border-border hover:bg-secondary transition-colors">
+              <BarChart2 className="w-3.5 h-3.5 text-foreground" aria-hidden />
             </button>
           </div>
         </div>
@@ -186,11 +186,11 @@ const ProductCard = ({ product, variant = "grid" }: ProductCardProps) => {
             <Link href={`/product/${product.id}`} className="flex-1 py-2.5 rounded-xl bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition-opacity text-center">
               View Product
             </Link>
-            <button className="p-2.5 rounded-xl border border-border hover:bg-secondary transition-colors">
-              <Heart className="w-4 h-4 text-foreground" />
+            <button type="button" aria-label={`Save ${product.name} to wishlist`} className="p-2.5 rounded-xl border border-border hover:bg-secondary transition-colors">
+              <Heart className="w-4 h-4 text-foreground" aria-hidden />
             </button>
-            <button className="p-2.5 rounded-xl border border-border hover:bg-secondary transition-colors">
-              <BarChart2 className="w-4 h-4 text-foreground" />
+            <button type="button" aria-label={`Compare ${product.name}`} className="p-2.5 rounded-xl border border-border hover:bg-secondary transition-colors">
+              <BarChart2 className="w-4 h-4 text-foreground" aria-hidden />
             </button>
           </div>
         </div>
@@ -218,12 +218,22 @@ const ProductCard = ({ product, variant = "grid" }: ProductCardProps) => {
                 <span className="text-xs font-bold text-destructive px-2 py-1 rounded-md bg-card border border-border">Out of stock</span>
               </div>
             )}
-            <div className="absolute top-2 right-2 flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              <button onClick={(e) => { e.preventDefault(); }} className="p-1.5 rounded-lg bg-card/90 backdrop-blur border border-border hover:bg-primary hover:text-primary-foreground transition-colors">
-                <Heart className="w-3.5 h-3.5" />
+            <div className="absolute top-2 right-2 flex flex-col gap-1 max-sm:opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
+              <button
+                type="button"
+                aria-label={`Save ${product.name} to wishlist`}
+                onClick={(e) => { e.preventDefault(); }}
+                className="p-1.5 rounded-lg bg-card/90 backdrop-blur border border-border hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
+                <Heart className="w-3.5 h-3.5" aria-hidden />
               </button>
-              <button onClick={(e) => { e.preventDefault(); }} className="p-1.5 rounded-lg bg-card/90 backdrop-blur border border-border hover:bg-primary hover:text-primary-foreground transition-colors">
-                <Eye className="w-3.5 h-3.5" />
+              <button
+                type="button"
+                aria-label={`Quick view ${product.name}`}
+                onClick={(e) => { e.preventDefault(); }}
+                className="p-1.5 rounded-lg bg-card/90 backdrop-blur border border-border hover:bg-primary hover:text-primary-foreground transition-colors"
+              >
+                <Eye className="w-3.5 h-3.5" aria-hidden />
               </button>
             </div>
           </div>
@@ -259,9 +269,9 @@ const ProductCard = ({ product, variant = "grid" }: ProductCardProps) => {
               e.preventDefault();
               if (purchasable) addItem(product);
             }}
-            className={`w-full py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-opacity ${
+            className={`w-full py-2.5 sm:py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-opacity min-h-[44px] sm:min-h-0 ${
               purchasable
-                ? "bg-primary text-primary-foreground opacity-0 group-hover:opacity-100"
+                ? "bg-primary text-primary-foreground max-sm:opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
                 : "bg-muted text-muted-foreground cursor-not-allowed opacity-100"
             }`}
           >

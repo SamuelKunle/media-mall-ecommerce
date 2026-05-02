@@ -201,7 +201,7 @@ const CategoryPage = ({ slug }: { slug: string }) => {
 
   return (
     <PageTransition>
-    <div className="min-h-screen bg-background pb-16 md:pb-0">
+    <div className="min-h-screen bg-background pb-mobile-nav md:pb-0">
       <SiteHeader />
 
       <main className="container py-4 md:py-6">
@@ -246,6 +246,7 @@ const CategoryPage = ({ slug }: { slug: string }) => {
             {subcategories.length > 0 && (
               <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide mb-5 pb-1">
                 <button
+                  type="button"
                   onClick={() => setSelectedSub(null)}
                   className={`filter-chip shrink-0 ${!selectedSub ? "active" : ""}`}
                 >
@@ -253,6 +254,7 @@ const CategoryPage = ({ slug }: { slug: string }) => {
                 </button>
                 {subcategories.map((sub) => (
                   <button
+                    type="button"
                     key={sub}
                     onClick={() => setSelectedSub(selectedSub === sub ? null : sub)}
                     className={`filter-chip shrink-0 ${selectedSub === sub ? "active" : ""}`}
@@ -267,6 +269,7 @@ const CategoryPage = ({ slug }: { slug: string }) => {
             <div className="flex items-center justify-between gap-3 mb-4">
               <div className="flex items-center gap-2">
                 <button
+                  type="button"
                   onClick={() => setShowFilters(!showFilters)}
                   className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-border text-sm font-medium text-foreground hover:bg-secondary transition-colors"
                 >
@@ -296,12 +299,18 @@ const CategoryPage = ({ slug }: { slug: string }) => {
                 </select>
                 <div className="hidden sm:flex items-center border border-border rounded-lg overflow-hidden">
                   <button
+                    type="button"
+                    aria-pressed={viewMode === "grid"}
+                    aria-label="Grid view"
                     onClick={() => setViewMode("grid")}
                     className={`p-2 transition-colors ${viewMode === "grid" ? "bg-primary text-primary-foreground" : "hover:bg-secondary text-foreground"}`}
                   >
                     <Grid3X3 className="w-4 h-4" />
                   </button>
                   <button
+                    type="button"
+                    aria-pressed={viewMode === "list"}
+                    aria-label="List view"
                     onClick={() => setViewMode("list")}
                     className={`p-2 transition-colors ${viewMode === "list" ? "bg-primary text-primary-foreground" : "hover:bg-secondary text-foreground"}`}
                   >
@@ -316,6 +325,7 @@ const CategoryPage = ({ slug }: { slug: string }) => {
               <div className="flex items-center gap-2 mb-4 flex-wrap">
                 {selectedBrands.map((brand) => (
                   <button
+                    type="button"
                     key={brand}
                     onClick={() => toggleBrand(brand)}
                     className="filter-chip active flex items-center gap-1"
@@ -324,6 +334,7 @@ const CategoryPage = ({ slug }: { slug: string }) => {
                   </button>
                 ))}
                 <button
+                  type="button"
                   onClick={() => setSelectedBrands([])}
                   className="text-xs text-primary hover:underline font-medium"
                 >

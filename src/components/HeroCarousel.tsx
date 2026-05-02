@@ -34,7 +34,7 @@ const HeroCarousel = () => {
   }, [slides.length]);
 
   return (
-    <div className="relative overflow-hidden rounded-2xl">
+    <div className="relative overflow-hidden rounded-2xl" role="region" aria-roledescription="carousel" aria-label="Featured promotions">
       <div
         className="flex transition-transform duration-500 ease-out"
         style={{ transform: `translateX(-${current * 100}%)` }}
@@ -54,17 +54,21 @@ const HeroCarousel = () => {
                 {slide.title}
               </h2>
               <p className="text-sm md:text-lg text-primary-foreground/80 mb-4">{slide.subtitle}</p>
-              <button className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-primary-foreground text-primary text-sm font-semibold hover:opacity-90 transition-opacity">
-                {slide.cta} <ChevronRight className="w-4 h-4" />
+              <button type="button" className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-primary-foreground text-primary text-sm font-semibold hover:opacity-90 transition-opacity">
+                {slide.cta} <ChevronRight className="w-4 h-4" aria-hidden />
               </button>
             </div>
           </div>
         ))}
       </div>
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5" role="tablist" aria-label="Slide navigation">
         {slides.map((_, i) => (
           <button
             key={i}
+            type="button"
+            role="tab"
+            aria-selected={i === current}
+            aria-label={`Slide ${i + 1} of ${slides.length}`}
             className={`h-1.5 rounded-full transition-all ${
               i === current ? "w-6 bg-primary-foreground" : "w-1.5 bg-primary-foreground/40"
             }`}

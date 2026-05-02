@@ -72,7 +72,7 @@ const SearchResults = () => {
     <PageTransition>
     <div className="min-h-screen bg-background">
       <SiteHeader />
-      <main className="container py-6 pb-24 md:pb-8">
+      <main className="container py-6 pb-mobile-nav md:pb-8">
         {/* Header */}
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-1">
@@ -92,6 +92,7 @@ const SearchResults = () => {
               <div className="space-y-1">
                 {resultCategories.map((cat) => (
                   <button
+                    type="button"
                     key={cat.slug}
                     onClick={() => setSelectedCategory(selectedCategory === cat.slug ? null : cat.slug)}
                     className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
@@ -111,6 +112,7 @@ const SearchResults = () => {
               <div className="space-y-1">
                 {resultBrands.map((brand) => (
                   <button
+                    type="button"
                     key={brand}
                     onClick={() => setSelectedBrand(selectedBrand === brand ? null : brand)}
                     className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
@@ -126,7 +128,7 @@ const SearchResults = () => {
             </div>
 
             {hasFilters && (
-              <button onClick={clearFilters} className="text-xs font-semibold text-deal hover:underline flex items-center gap-1">
+              <button type="button" onClick={clearFilters} className="text-xs font-semibold text-deal hover:underline flex items-center gap-1">
                 <X className="w-3 h-3" /> Clear all filters
               </button>
             )}
@@ -137,6 +139,7 @@ const SearchResults = () => {
             {/* Toolbar */}
             <div className="flex items-center gap-2 mb-4 flex-wrap">
               <button
+                type="button"
                 onClick={() => setShowFilters(!showFilters)}
                 className="lg:hidden flex items-center gap-1.5 px-3 py-2 rounded-lg border border-border text-sm font-medium text-foreground hover:bg-secondary transition-colors"
               >
@@ -148,13 +151,13 @@ const SearchResults = () => {
               {selectedCategory && (
                 <span className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
                   {categories.find((c) => c.slug === selectedCategory)?.name}
-                  <button onClick={() => setSelectedCategory(null)}><X className="w-3 h-3" /></button>
+                  <button type="button" aria-label="Remove category filter" onClick={() => setSelectedCategory(null)}><X className="w-3 h-3" /></button>
                 </span>
               )}
               {selectedBrand && (
                 <span className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
                   {selectedBrand}
-                  <button onClick={() => setSelectedBrand(null)}><X className="w-3 h-3" /></button>
+                  <button type="button" aria-label="Remove brand filter" onClick={() => setSelectedBrand(null)}><X className="w-3 h-3" /></button>
                 </span>
               )}
 
@@ -171,10 +174,10 @@ const SearchResults = () => {
                   <option value="reviews">Most Reviewed</option>
                 </select>
                 <div className="hidden sm:flex items-center border border-border rounded-lg overflow-hidden">
-                  <button onClick={() => setViewMode("grid")} className={`p-2 ${viewMode === "grid" ? "bg-primary/10 text-primary" : "text-muted-foreground"}`}>
+                  <button type="button" aria-pressed={viewMode === "grid"} aria-label="Grid view" onClick={() => setViewMode("grid")} className={`p-2 ${viewMode === "grid" ? "bg-primary/10 text-primary" : "text-muted-foreground"}`}>
                     <Grid3X3 className="w-4 h-4" />
                   </button>
-                  <button onClick={() => setViewMode("list")} className={`p-2 ${viewMode === "list" ? "bg-primary/10 text-primary" : "text-muted-foreground"}`}>
+                  <button type="button" aria-pressed={viewMode === "list"} aria-label="List view" onClick={() => setViewMode("list")} className={`p-2 ${viewMode === "list" ? "bg-primary/10 text-primary" : "text-muted-foreground"}`}>
                     <List className="w-4 h-4" />
                   </button>
                 </div>
@@ -189,6 +192,7 @@ const SearchResults = () => {
                   <div className="flex flex-wrap gap-2">
                     {resultCategories.map((cat) => (
                       <button
+                        type="button"
                         key={cat.slug}
                         onClick={() => setSelectedCategory(selectedCategory === cat.slug ? null : cat.slug)}
                         className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
@@ -205,6 +209,7 @@ const SearchResults = () => {
                   <div className="flex flex-wrap gap-2">
                     {resultBrands.map((brand) => (
                       <button
+                        type="button"
                         key={brand}
                         onClick={() => setSelectedBrand(selectedBrand === brand ? null : brand)}
                         className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
@@ -237,7 +242,7 @@ const SearchResults = () => {
                   {hasFilters ? "Try removing some filters" : `We couldn't find anything matching "${query}"`}
                 </p>
                 {hasFilters && (
-                  <button onClick={clearFilters} className="px-5 py-2 rounded-xl bg-primary text-primary-foreground text-sm font-semibold">
+                  <button type="button" onClick={clearFilters} className="px-5 py-2 rounded-xl bg-primary text-primary-foreground text-sm font-semibold">
                     Clear Filters
                   </button>
                 )}

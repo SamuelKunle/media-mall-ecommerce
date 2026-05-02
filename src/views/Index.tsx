@@ -29,18 +29,18 @@ const Index = () => {
 
   return (
     <PageTransition>
-    <div className="min-h-screen bg-background pb-16 md:pb-0">
+    <div className="min-h-screen bg-background pb-mobile-nav md:pb-0">
       <SiteHeader />
       <TrustStrip />
 
-      <main className="container space-y-8 py-6">
+      <main className="container page-stack scroll-smooth">
         {/* Hero + Side Promos */}
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-3">
           <div className="lg:col-span-2">
             <HeroCarousel />
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-1 gap-3">
-            <Link href="/product/10" className="gradient-deal rounded-2xl p-5 flex flex-col justify-between text-primary-foreground">
+            <Link href="/product/10" className="gradient-deal rounded-2xl p-5 flex flex-col justify-between text-primary-foreground shadow-sm hover:shadow-md transition-shadow duration-200">
               <div>
                 <span className="badge-flash mb-2 inline-block">🔥 Hot Deal</span>
                 <h3 className="text-sm font-bold mt-2">{promoAirPods?.name ?? "AirPods Pro 2"}</h3>
@@ -50,7 +50,7 @@ const Index = () => {
                 {promoAirPods ? formatPrice(promoAirPods.price) : formatPrice(249)}
               </p>
             </Link>
-            <Link href="/product/2" className="bg-card rounded-2xl border border-border p-5 flex flex-col justify-between">
+            <Link href="/product/2" className="bg-card rounded-2xl border border-border p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200">
               <div>
                 <span className="badge-new mb-2 inline-block">New Arrival</span>
                 <h3 className="text-sm font-bold text-foreground mt-2">{promoGalaxy?.name ?? "Galaxy S24 Ultra"}</h3>

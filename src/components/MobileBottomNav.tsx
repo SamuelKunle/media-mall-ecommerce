@@ -27,7 +27,8 @@ const MobileBottomNav = () => {
             <Link
               key={tab.label}
               href={tab.path}
-              className={`flex flex-col items-center gap-0.5 px-3 py-1 relative transition-colors ${
+              aria-current={active ? "page" : undefined}
+              className={`flex flex-col items-center justify-center gap-0.5 px-2 py-2 min-h-[48px] min-w-[52px] relative transition-colors rounded-xl ${
                 active ? "text-primary" : "text-muted-foreground"
               }`}
             >

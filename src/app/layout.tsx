@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Providers } from "./providers";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export const metadata: Metadata = {
+  ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
   title: "MediaMall — Electronics & Tech Store",
   description:
     "Shop genuine phones, laptops, gaming, audio & accessories. Prices in USD. Free shipping over $99 on qualifying orders, official warranty, installment options.",

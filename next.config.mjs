@@ -6,6 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
   /** Prefer this project when multiple package-lock files exist (e.g. home dir + repo). */
   outputFileTracingRoot: path.join(__dirname),
   images: {

@@ -120,6 +120,11 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 
+  /* Keyboard / accessibility — visible focus without cluttering mouse clicks */
+  :where(a, button, input, select, textarea, summary):focus-visible {
+    @apply outline-none ring-2 ring-primary/55 ring-offset-2 ring-offset-background;
+  }
+
   @media (max-width: 767px) {
     html,
     body {
@@ -149,6 +154,20 @@
   .product-card:hover {
     box-shadow: var(--shadow-card-hover);
     @apply -translate-y-0.5;
+  }
+
+  /* Layout rhythm for marketing pages */
+  .page-stack {
+    @apply space-y-10 md:space-y-12 py-8 md:py-10;
+  }
+
+  /* Space above fixed bottom nav + iOS safe area */
+  .pb-mobile-nav {
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .link-inline {
+    @apply text-primary font-medium underline-offset-4 hover:underline focus-visible:underline;
   }
 
   .badge-deal {

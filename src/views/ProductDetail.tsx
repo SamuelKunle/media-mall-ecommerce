@@ -88,7 +88,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
     />
-    <div className="min-h-screen bg-background pb-24 md:pb-0">
+    <div className="min-h-screen bg-background pb-mobile-nav md:pb-0">
       <SiteHeader />
 
       <main className="container py-4 md:py-6">
@@ -130,15 +130,21 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
               {/* Floating actions */}
               <div className="absolute top-3 right-3 flex flex-col gap-2">
                 <button
+                  type="button"
+                  aria-label={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
                   onClick={() => setIsWishlisted(!isWishlisted)}
                   className={`w-9 h-9 rounded-full flex items-center justify-center transition-all shadow-sm ${
                     isWishlisted ? "bg-deal text-deal-foreground" : "bg-card/90 backdrop-blur text-foreground hover:bg-card"
                   }`}
                 >
-                  <Heart className={`w-4 h-4 ${isWishlisted ? "fill-current" : ""}`} />
+                  <Heart className={`w-4 h-4 ${isWishlisted ? "fill-current" : ""}`} aria-hidden />
                 </button>
-                <button className="w-9 h-9 rounded-full bg-card/90 backdrop-blur text-foreground flex items-center justify-center hover:bg-card transition-all shadow-sm">
-                  <Share2 className="w-4 h-4" />
+                <button
+                  type="button"
+                  aria-label="Share product"
+                  className="w-9 h-9 rounded-full bg-card/90 backdrop-blur text-foreground flex items-center justify-center hover:bg-card transition-all shadow-sm"
+                >
+                  <Share2 className="w-4 h-4" aria-hidden />
                 </button>
               </div>
               {/* View count hint */}
@@ -149,7 +155,10 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             <div className="flex gap-2">
               {images.map((img, i) => (
                 <button
+                  type="button"
                   key={i}
+                  aria-label={`View product image ${i + 1}`}
+                  aria-current={i === activeImage ? "true" : undefined}
                   onClick={() => setActiveImage(i)}
                   className={`w-16 h-16 md:w-20 md:h-20 rounded-xl border-2 overflow-hidden bg-card transition-all ${
                     i === activeImage ? "border-primary shadow-sm" : "border-border hover:border-primary/30"
@@ -216,7 +225,9 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
                   <CreditCard className="w-3.5 h-3.5" /> {product.installment}
                 </p>
               )}
-              <p className="text-xs text-muted-foreground">VAT inclusive · Official warranty included</p>
+              <p className="text-xs text-muted-foreground">
+                Prices in USD. Tax and fees, if any, are shown at checkout. Official warranty included.
+              </p>
             </div>
 
             {/* Stock */}
@@ -290,15 +301,16 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             {/* Secondary actions */}
             <div className="flex items-center gap-2">
               <button
+                type="button"
                 onClick={() => setIsWishlisted(!isWishlisted)}
                 className={`flex-1 py-2.5 rounded-xl border text-sm font-medium transition-colors flex items-center justify-center gap-1.5 ${
                   isWishlisted ? "border-deal text-deal bg-deal/5" : "border-border text-foreground hover:bg-secondary"
                 }`}
               >
-                <Heart className={`w-4 h-4 ${isWishlisted ? "fill-current" : ""}`} /> {isWishlisted ? "Wishlisted" : "Wishlist"}
+                <Heart className={`w-4 h-4 ${isWishlisted ? "fill-current" : ""}`} aria-hidden /> {isWishlisted ? "Wishlisted" : "Wishlist"}
               </button>
-              <button className="flex-1 py-2.5 rounded-xl border border-border text-sm font-medium text-foreground hover:bg-secondary transition-colors flex items-center justify-center gap-1.5">
-                <BarChart2 className="w-4 h-4" /> Compare
+              <button type="button" className="flex-1 py-2.5 rounded-xl border border-border text-sm font-medium text-foreground hover:bg-secondary transition-colors flex items-center justify-center gap-1.5">
+                <BarChart2 className="w-4 h-4" aria-hidden /> Compare
               </button>
             </div>
 
