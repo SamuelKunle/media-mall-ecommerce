@@ -1,8 +1,9 @@
 import { Shield, Truck, RefreshCw, Headphones, CreditCard, Award } from "lucide-react";
+import { formatPrice, FREE_SHIPPING_THRESHOLD_USD } from "@/lib/commerce";
 
 const features = [
   { icon: Shield, label: "100% Genuine", sub: "Authorized retailer" },
-  { icon: Truck, label: "Free Delivery", sub: "Orders over $99" },
+  { icon: Truck, label: "Free Delivery", sub: `Orders over ${formatPrice(FREE_SHIPPING_THRESHOLD_USD)}` },
   { icon: RefreshCw, label: "Easy Returns", sub: "30-day policy" },
   { icon: CreditCard, label: "0% Installment", sub: "Up to 12 months" },
   { icon: Award, label: "Official Warranty", sub: "Full manufacturer" },

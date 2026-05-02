@@ -14,6 +14,7 @@ import {
   DEMO_MAX_UNITS_PER_SKU,
   isPurchasable,
   FREE_SHIPPING_THRESHOLD_USD,
+  STORE_CURRENCY_CODE,
 } from "@/lib/commerce";
 import { motion } from "framer-motion";
 import { useRecentlyViewed } from "@/hooks/useRecentlyViewed";
@@ -51,7 +52,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
     brand: { "@type": "Brand", name: product.brand },
     offers: {
       "@type": "Offer",
-      priceCurrency: "USD",
+      priceCurrency: STORE_CURRENCY_CODE,
       price: product.price,
       availability: purchasable
         ? "https://schema.org/InStock"

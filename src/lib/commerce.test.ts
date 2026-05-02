@@ -7,6 +7,7 @@ import {
   cartSavings,
   FREE_SHIPPING_THRESHOLD_USD,
   FLAT_SHIPPING_USD,
+  STORE_CURRENCY_CODE,
   DEMO_MAX_UNITS_PER_SKU,
   isPurchasable,
 } from "./commerce";
@@ -22,6 +23,7 @@ const p = (overrides: Partial<Product> & Pick<Product, "id" | "name" | "price">)
 
 describe("commerce", () => {
   it("formatPrice uses USD", () => {
+    expect(STORE_CURRENCY_CODE).toBe("USD");
     expect(formatPrice(1299)).toMatch(/\$/);
     expect(formatPrice(1000)).toMatch(/1,000/);
   });

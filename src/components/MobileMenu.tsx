@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { categories, type CategoryInfo } from "@/data/products";
 import { useCart } from "@/contexts/CartContext";
+import { formatPrice, FREE_SHIPPING_THRESHOLD_USD } from "@/lib/commerce";
 
 interface MobileMenuProps {
   open: boolean;
@@ -131,6 +132,8 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
   const filteredCategories = searchQuery
     ? categories.filter((c) => c.name.toLowerCase().includes(searchQuery.toLowerCase()))
     : categories;
+
+  const freeShippingShortLabel = `Free over ${formatPrice(FREE_SHIPPING_THRESHOLD_USD)}`;
 
   return (
     <AnimatePresence>
@@ -384,7 +387,7 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
                         <div className="px-2 pb-2">
                           {[
                             { icon: <CheckCircle className="w-4 h-4 text-success" />, label: "100% Genuine Products", sub: "Official warranty", bg: "bg-success/8" },
-                            { icon: <Truck className="w-4 h-4 text-primary" />, label: "Fast Delivery", sub: "Free over $99", path: "/shipping", bg: "bg-primary/8" },
+                            { icon: <Truck className="w-4 h-4 text-primary" />, label: "Fast Delivery", sub: freeShippingShortLabel, path: "/shipping", bg: "bg-primary/8" },
                             { icon: <Shield className="w-4 h-4 text-primary" />, label: "Warranty Center", sub: "Check & claim", path: "/warranty", bg: "bg-primary/8" },
                             { icon: <Store className="w-4 h-4 text-primary" />, label: "Store Pickup", sub: "Collect in-store", path: "/store-locator", bg: "bg-primary/8" },
                             { icon: <HelpCircle className="w-4 h-4 text-primary" />, label: "Help Center", sub: "FAQs & support", path: "/support", bg: "bg-primary/8" },

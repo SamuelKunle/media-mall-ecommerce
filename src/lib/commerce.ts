@@ -9,10 +9,13 @@ export const FREE_SHIPPING_THRESHOLD_USD = 99;
 /** Flat shipping when below threshold (USD, whole dollars) */
 export const FLAT_SHIPPING_USD = 10;
 
+/** ISO 4217 code used for all storefront prices. */
+export const STORE_CURRENCY_CODE = "USD" as const;
+
 export function formatPrice(price: number): string {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "USD",
+    currency: STORE_CURRENCY_CODE,
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(price);
