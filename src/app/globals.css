@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 10%;
+
+    --primary: 228 88% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 30% 10%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 220 14% 96%;
+    --accent-foreground: 220 30% 10%;
+
+    --destructive: 4 74% 56%;
+    --destructive-foreground: 0 0% 100%;
+
+    --deal: 4 74% 56%;
+    --deal-foreground: 0 0% 100%;
+
+    --success: 142 72% 29%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 228 88% 47%;
+
+    --radius: 0.875rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 228 88% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 220 30% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 228 88% 47%;
+
+    /* Custom tokens */
+    --surface: 0 0% 100%;
+    --surface-elevated: 0 0% 100%;
+    --text-primary: 220 30% 10%;
+    --text-secondary: 220 9% 46%;
+    --text-muted: 220 9% 64%;
+    --price: 4 74% 46%;
+    --price-old: 220 9% 64%;
+    --badge-deal: 4 74% 56%;
+    --badge-new: 228 88% 47%;
+    --badge-bestseller: 38 92% 50%;
+    --badge-official: 142 72% 29%;
+    --badge-flash: 338 80% 50%;
+    --gradient-hero-start: 228 88% 47%;
+    --gradient-hero-end: 228 72% 32%;
+    --gradient-deal-start: 4 74% 56%;
+    --gradient-deal-end: 338 80% 50%;
+    --shadow-card: 0 1px 3px 0 hsl(220 30% 10% / 0.06), 0 1px 2px -1px hsl(220 30% 10% / 0.06);
+    --shadow-card-hover: 0 10px 25px -5px hsl(220 30% 10% / 0.1), 0 8px 10px -6px hsl(220 30% 10% / 0.06);
+    --shadow-elevated: 0 20px 40px -12px hsl(220 30% 10% / 0.12);
+  }
+
+  .dark {
+    --background: 220 30% 6%;
+    --foreground: 220 14% 96%;
+    --card: 220 25% 10%;
+    --card-foreground: 220 14% 96%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 220 14% 96%;
+    --primary: 228 80% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 16%;
+    --secondary-foreground: 220 14% 96%;
+    --muted: 220 20% 16%;
+    --muted-foreground: 220 9% 60%;
+    --accent: 220 20% 16%;
+    --accent-foreground: 220 14% 96%;
+    --destructive: 4 74% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --deal: 4 74% 50%;
+    --deal-foreground: 0 0% 100%;
+    --success: 142 72% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 228 80% 60%;
+    --surface: 220 25% 10%;
+    --surface-elevated: 220 22% 14%;
+    --text-primary: 220 14% 96%;
+    --text-secondary: 220 9% 60%;
+    --text-muted: 220 9% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  @media (max-width: 767px) {
+    html,
+    body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+      background: transparent;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .product-card {
+    @apply bg-card rounded-xl border border-border overflow-hidden transition-all duration-200;
+    box-shadow: var(--shadow-card);
+  }
+  .product-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    @apply -translate-y-0.5;
+  }
+
+  .badge-deal {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-bold;
+    background: hsl(var(--badge-deal));
+    color: hsl(var(--deal-foreground));
+  }
+  .badge-new {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-bold;
+    background: hsl(var(--badge-new));
+    color: hsl(var(--primary-foreground));
+  }
+  .badge-bestseller {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-bold;
+    background: hsl(var(--badge-bestseller));
+    color: hsl(var(--warning-foreground));
+  }
+  .badge-official {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-bold;
+    background: hsl(var(--badge-official));
+    color: hsl(var(--success-foreground));
+  }
+  .badge-flash {
+    @apply inline-flex items-center px-2 py-0.5 rounded-md text-xs font-bold;
+    background: hsl(var(--badge-flash));
+    color: white;
+  }
+
+  .price-current {
+    @apply text-lg font-extrabold;
+    color: hsl(var(--price));
+  }
+  .price-old {
+    @apply text-sm line-through;
+    color: hsl(var(--price-old));
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--gradient-hero-start)), hsl(var(--gradient-hero-end)));
+  }
+  .gradient-deal {
+    background: linear-gradient(135deg, hsl(var(--gradient-deal-start)), hsl(var(--gradient-deal-end)));
+  }
+
+  .section-title {
+    @apply text-xl md:text-2xl font-bold tracking-tight;
+    color: hsl(var(--text-primary));
+  }
+
+  .trust-strip {
+    @apply bg-card border-y border-border py-4;
+  }
+
+  .sticky-header {
+    @apply sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border;
+  }
+
+  .bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 z-50 bg-card border-t border-border;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  .category-chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-medium bg-secondary text-secondary-foreground transition-colors hover:bg-primary hover:text-primary-foreground cursor-pointer;
+  }
+
+  .filter-chip {
+    @apply inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium border border-border bg-card text-foreground transition-colors;
+  }
+  .filter-chip.active {
+    @apply bg-primary text-primary-foreground border-primary;
+  }
+
+  .skeleton-pulse {
+    @apply animate-pulse bg-muted rounded-lg;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Scrollbar hide - outside @layer for maximum specificity */
+.scrollbar-hide,
+.scrollbar-hide * {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+.scrollbar-hide::-webkit-scrollbar,
+.scrollbar-hide *::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
