@@ -7,12 +7,12 @@ import SiteFooter from "@/components/SiteFooter";
 import MobileBottomNav from "@/components/MobileBottomNav";
 
 const stores = [
-  { name: "MediaMall Ikeja City Mall", address: "Alausa, Ikeja, Lagos", phone: "0812 345 6789", hours: "9am – 9pm", area: "Ikeja" },
-  { name: "MediaMall Victoria Island", address: "Adeola Odeku St, VI, Lagos", phone: "0812 345 6790", hours: "10am – 8pm", area: "Victoria Island" },
-  { name: "MediaMall Lekki", address: "Admiralty Way, Lekki Phase 1, Lagos", phone: "0812 345 6791", hours: "9am – 9pm", area: "Lekki" },
-  { name: "MediaMall Abuja", address: "Jabi Lake Mall, Jabi, Abuja", phone: "0812 345 6792", hours: "10am – 8pm", area: "Abuja" },
-  { name: "MediaMall Port Harcourt", address: "Aba Rd, Port Harcourt, Rivers", phone: "0812 345 6793", hours: "9am – 8pm", area: "Port Harcourt" },
-  { name: "MediaMall Ibadan", address: "Ring Road, Ibadan, Oyo", phone: "0812 345 6794", hours: "9am – 7pm", area: "Ibadan" },
+  { name: "MediaMall Austin — Domain Northside", address: "11410 Domain Dr, Austin, TX 78758", phone: "(512) 555-0100", hours: "9am – 9pm", area: "Austin" },
+  { name: "MediaMall Seattle — University Village", address: "2623 NE University Village St, Seattle, WA 98105", phone: "(206) 555-0112", hours: "10am – 8pm", area: "Seattle" },
+  { name: "MediaMall Denver — Cherry Creek", address: "3000 E 1st Ave, Denver, CO 80206", phone: "(303) 555-0144", hours: "9am – 9pm", area: "Denver" },
+  { name: "MediaMall Dallas — NorthPark Center", address: "8687 North Central Expy, Dallas, TX 75225", phone: "(214) 555-0188", hours: "10am – 8pm", area: "Dallas" },
+  { name: "MediaMall Phoenix — Scottsdale Fashion Square", address: "7014 E Camelback Rd, Scottsdale, AZ 85251", phone: "(480) 555-0199", hours: "9am – 8pm", area: "Scottsdale" },
+  { name: "MediaMall Atlanta — Buckhead", address: "3393 Peachtree Rd NE, Atlanta, GA 30326", phone: "(404) 555-0166", hours: "9am – 7pm", area: "Atlanta" },
 ];
 
 const StoreLocator = () => {

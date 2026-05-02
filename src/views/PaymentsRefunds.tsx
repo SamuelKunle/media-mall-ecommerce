@@ -10,9 +10,9 @@ import MobileBottomNav from "@/components/MobileBottomNav";
 
 const paymentMethods = [
   { name: "Bank Transfer", desc: "Direct transfer to our bank account" },
-  { name: "Card Payment", desc: "Visa, Mastercard & Verve accepted" },
-  { name: "USSD", desc: "Pay via USSD from any bank" },
-  { name: "Pay on Delivery", desc: "Cash or POS on delivery (Lagos only)" },
+  { name: "Card Payment", desc: "Visa, Mastercard & American Express accepted" },
+  { name: "Digital wallets", desc: "Apple Pay and Google Pay where available" },
+  { name: "Pay on delivery", desc: "Cash or card on delivery in eligible areas" },
 ];
 
 const faqs = [

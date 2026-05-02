@@ -13,7 +13,7 @@ import MobileBottomNav from "@/components/MobileBottomNav";
 const orderIdSchema = z.string().trim().min(5, "Enter a valid order ID").max(30);
 
 const faqs = [
-  { q: "How long does delivery take?", a: "Standard delivery takes 2–5 business days within Lagos and 5–10 days nationwide. Express delivery (Lagos only) arrives within 24 hours." },
+  { q: "How long does delivery take?", a: "Standard delivery usually takes 2–5 business days. Express options may be available in select metro areas—see checkout for eligibility." },
   { q: "Can I modify my order after placing it?", a: "You can modify your order within 1 hour of placing it. After that, contact our support team for assistance." },
   { q: "How do I cancel an order?", a: "Go to your Account → Orders, select the order, and click 'Cancel'. If the order has shipped, you'll need to initiate a return instead." },
   { q: "What happens if my delivery is delayed?", a: "If your order exceeds the estimated delivery window, contact us and we'll investigate. You may be eligible for a shipping refund." },
@@ -70,8 +70,8 @@ const OrdersDelivery = () => {
         <section className="container max-w-3xl py-10">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
             {[
-              { icon: Truck, title: "Free Delivery", desc: "On orders over ₦50,000" },
-              { icon: Clock, title: "Express Available", desc: "24hr delivery in Lagos" },
+              { icon: Truck, title: "Free Delivery", desc: "On qualifying orders over $99" },
+              { icon: Clock, title: "Express Available", desc: "Same-day in select metros" },
               { icon: RotateCcw, title: "Easy Returns", desc: "7-day return window" },
             ].map((item) => (
               <div key={item.title} className="bg-card border border-border rounded-xl p-5 text-center">

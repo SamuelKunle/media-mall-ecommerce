@@ -3,13 +3,13 @@ import { Providers } from "./providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MediaMall — Nigeria's Premium Electronics Store",
+  title: "MediaMall — Electronics & Tech Store",
   description:
-    "Shop genuine phones, laptops, gaming, audio & accessories at Nigeria's most trusted electronics retailer. Free delivery, official warranty, 0% installment.",
+    "Shop genuine phones, laptops, gaming, audio & accessories. Prices in USD. Free shipping over $99 on qualifying orders, official warranty, installment options.",
   openGraph: {
-    title: "MediaMall — Nigeria's Premium Electronics Store",
+    title: "MediaMall — Electronics & Tech Store",
     description:
-      "Shop genuine phones, laptops, gaming, audio & accessories. Free delivery, official warranty, 0% installment.",
+      "Shop genuine phones, laptops, gaming, audio & accessories. USD pricing, free shipping on qualifying orders, official warranty.",
     type: "website",
   },
   twitter: {

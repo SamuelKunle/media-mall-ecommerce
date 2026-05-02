@@ -2,7 +2,7 @@ import { Shield, Truck, RefreshCw, Headphones, CreditCard, Award } from "lucide-
 
 const features = [
   { icon: Shield, label: "100% Genuine", sub: "Authorized retailer" },
-  { icon: Truck, label: "Free Delivery", sub: "Orders over ₦50K" },
+  { icon: Truck, label: "Free Delivery", sub: "Orders over $99" },
   { icon: RefreshCw, label: "Easy Returns", sub: "30-day policy" },
   { icon: CreditCard, label: "0% Installment", sub: "Up to 12 months" },
   { icon: Award, label: "Official Warranty", sub: "Full manufacturer" },

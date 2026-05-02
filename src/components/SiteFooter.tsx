@@ -74,12 +74,12 @@ const SiteFooter = () => {
               <span className="text-lg font-extrabold tracking-tight">MediaMall</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4 max-w-xs">
-              Nigeria's premium electronics destination. Official products, genuine warranty, best prices.
+              Your destination for official electronics, genuine warranty, and fair prices. Prices in USD.
             </p>
             <div className="flex flex-col gap-2 text-xs text-muted-foreground">
-              <span className="flex items-center gap-1.5"><Phone className="w-3 h-3" /> 0800 MEDIAMALL (Free)</span>
-              <span className="flex items-center gap-1.5"><Mail className="w-3 h-3" /> support@mediamall.ng</span>
-              <span className="flex items-center gap-1.5"><MapPin className="w-3 h-3" /> 30+ stores nationwide</span>
+              <span className="flex items-center gap-1.5"><Phone className="w-3 h-3" /> 1-800-MEDIA-123</span>
+              <span className="flex items-center gap-1.5"><Mail className="w-3 h-3" /> support@mediamall.com</span>
+              <span className="flex items-center gap-1.5"><MapPin className="w-3 h-3" /> Stores across the U.S.</span>
             </div>
           </div>
 
@@ -137,7 +137,7 @@ const SiteFooter = () => {
 
         {/* Bottom */}
         <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">© 2026 MediaMall Nigeria. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">© 2026 MediaMall. All rights reserved.</p>
           <div className="flex items-center gap-4 text-xs text-muted-foreground">
             <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-foreground transition-colors">Terms</Link>

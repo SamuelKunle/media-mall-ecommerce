@@ -8,6 +8,10 @@ import MobileBottomNav from "@/components/MobileBottomNav";
 import ProductCard, { formatPrice } from "@/components/ProductCard";
 import { sampleProducts } from "@/data/products";
 import { useCart } from "@/contexts/CartContext";
+import {
+  shippingFromSubtotal,
+  FREE_SHIPPING_THRESHOLD_USD,
+} from "@/lib/commerce";
 import { Minus, Plus, Trash2, Tag, Truck, Shield, ChevronRight, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 
@@ -15,7 +19,7 @@ const Cart = () => {
   const { items, updateQty, removeItem, totalItems, subtotal, savings } = useCart();
   const [promoCode, setPromoCode] = useState("");
 
-  const shipping = subtotal > 50000 ? 0 : 3500;
+  const shipping = shippingFromSubtotal(subtotal);
   const total = subtotal + shipping;
 
   const recommended = sampleProducts.filter((p) => !items.some((i) => i.product.id === p.id)).slice(0, 5);
@@ -140,7 +144,9 @@ const Cart = () => {
                   <span className="font-medium text-foreground">{shipping === 0 ? "Free" : formatPrice(shipping)}</span>
                 </div>
                 {shipping > 0 && (
-                  <p className="text-[11px] text-muted-foreground">Free delivery on orders over ₦50,000</p>
+                  <p className="text-[11px] text-muted-foreground">
+                    Free delivery on orders over {formatPrice(FREE_SHIPPING_THRESHOLD_USD)}
+                  </p>
                 )}
                 <div className="border-t border-border pt-2 flex justify-between">
                   <span className="font-bold text-foreground">Total</span>

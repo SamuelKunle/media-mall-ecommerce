@@ -35,7 +35,7 @@ const AllCategoriesView = () => {
             All Categories
           </h1>
           <p className="text-sm md:text-base text-primary-foreground/80 leading-relaxed">
-            Explore Nigeria's widest range of genuine electronics. From smartphones to smart homes — find exactly what you need.
+            Explore a wide range of genuine electronics. From smartphones to smart homes — find exactly what you need.
           </p>
         </div>
         {/* Decorative shapes */}

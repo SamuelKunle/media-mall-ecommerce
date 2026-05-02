@@ -13,6 +13,7 @@ import { sampleProducts } from "@/data/products";
 import {
   DEMO_MAX_UNITS_PER_SKU,
   isPurchasable,
+  FREE_SHIPPING_THRESHOLD_USD,
 } from "@/lib/commerce";
 import { motion } from "framer-motion";
 import { useRecentlyViewed } from "@/hooks/useRecentlyViewed";
@@ -50,13 +51,15 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
     brand: { "@type": "Brand", name: product.brand },
     offers: {
       "@type": "Offer",
-      priceCurrency: "NGN",
+      priceCurrency: "USD",
       price: product.price,
       availability: purchasable
         ? "https://schema.org/InStock"
         : "https://schema.org/OutOfStock",
     },
   };
+
+  const freeDeliveryLabel = `Free delivery over ${formatPrice(FREE_SHIPPING_THRESHOLD_USD)}`;
 
   const fullSpecs = [
     { label: "Brand", value: product.brand },
@@ -301,7 +304,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             {/* Trust Features */}
             <div className="grid grid-cols-2 gap-3 pt-2">
               {[
-                { icon: Truck, text: "Free delivery over ₦50K", highlight: true },
+                { icon: Truck, text: freeDeliveryLabel, highlight: true },
                 { icon: Shield, text: "100% genuine products" },
                 { icon: RefreshCw, text: "30-day easy returns" },
                 { icon: CreditCard, text: "0% installment plans" },

@@ -11,11 +11,11 @@ import MobileBottomNav from "@/components/MobileBottomNav";
 const categories = ["All", "Buying Guides", "Tips & Tricks", "Industry News", "Reviews", "How-To"];
 
 const posts = [
-  { title: "Best Laptops for Students in 2026: Our Top Picks", category: "Buying Guides", date: "Feb 28, 2026", readTime: "6 min", excerpt: "Whether you're studying engineering or liberal arts, here are the best laptops that balance performance, portability, and price for Nigerian students." },
+  { title: "Best Laptops for Students in 2026: Our Top Picks", category: "Buying Guides", date: "Feb 28, 2026", readTime: "6 min", excerpt: "Whether you're studying engineering or liberal arts, here are the best laptops that balance performance, portability, and price." },
   { title: "How to Transfer Data from Your Old Phone to a New One", category: "How-To", date: "Feb 20, 2026", readTime: "4 min", excerpt: "Switching phones? Follow our step-by-step guide to move contacts, photos, apps, and WhatsApp chats seamlessly." },
   { title: "5 Tips to Extend Your Laptop Battery Life", category: "Tips & Tricks", date: "Feb 15, 2026", readTime: "3 min", excerpt: "Simple habits that can dramatically improve how long your laptop lasts between charges." },
-  { title: "Samsung Galaxy S26 vs iPhone 17: Which Should You Buy?", category: "Reviews", date: "Feb 10, 2026", readTime: "8 min", excerpt: "We compare the two flagship titans across design, camera, performance, and value for the Nigerian market." },
-  { title: "Nigeria's Smartphone Market Grows 23% in 2025", category: "Industry News", date: "Jan 30, 2026", readTime: "5 min", excerpt: "New data shows strong growth in smartphone adoption driven by affordable 5G devices and expanding mobile internet." },
+  { title: "Samsung Galaxy S26 vs iPhone 17: Which Should You Buy?", category: "Reviews", date: "Feb 10, 2026", readTime: "8 min", excerpt: "We compare the two flagship titans across design, camera, performance, and value." },
+  { title: "Global Smartphone Sales Trends in 2025", category: "Industry News", date: "Jan 30, 2026", readTime: "5 min", excerpt: "New data shows continued growth in smartphone adoption driven by affordable 5G devices and expanding mobile broadband." },
   { title: "How to Choose the Right TV Size for Your Room", category: "Buying Guides", date: "Jan 22, 2026", readTime: "4 min", excerpt: "Our simple formula helps you pick the perfect TV size based on your viewing distance and room layout." },
   { title: "Setting Up Your Smart Home: A Beginner's Guide", category: "How-To", date: "Jan 15, 2026", readTime: "7 min", excerpt: "From smart bulbs to security cameras, here's how to start building your connected home without breaking the bank." },
   { title: "Why You Should Consider Extended Warranty", category: "Tips & Tricks", date: "Jan 8, 2026", readTime: "3 min", excerpt: "Is extended warranty worth it? We break down the numbers and scenarios where it pays for itself." },

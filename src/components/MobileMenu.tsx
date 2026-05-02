@@ -181,7 +181,7 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
               <div className="flex items-center gap-2">
                 <Link href="/store-locator" onClick={handleLink}
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-foreground/15 hover:bg-primary-foreground/25 text-primary-foreground text-xs font-medium transition-colors">
-                  <MapPin className="w-3.5 h-3.5" /> Lagos, NG
+                  <MapPin className="w-3.5 h-3.5" /> Austin, TX
                 </Link>
                 <Link href="/cart" onClick={handleLink}
                   className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-foreground/15 hover:bg-primary-foreground/25 text-primary-foreground text-xs font-medium transition-colors">
@@ -384,7 +384,7 @@ const MobileMenu = ({ open, onClose }: MobileMenuProps) => {
                         <div className="px-2 pb-2">
                           {[
                             { icon: <CheckCircle className="w-4 h-4 text-success" />, label: "100% Genuine Products", sub: "Official warranty", bg: "bg-success/8" },
-                            { icon: <Truck className="w-4 h-4 text-primary" />, label: "Fast Delivery", sub: "Free over ₦50K", path: "/shipping", bg: "bg-primary/8" },
+                            { icon: <Truck className="w-4 h-4 text-primary" />, label: "Fast Delivery", sub: "Free over $99", path: "/shipping", bg: "bg-primary/8" },
                             { icon: <Shield className="w-4 h-4 text-primary" />, label: "Warranty Center", sub: "Check & claim", path: "/warranty", bg: "bg-primary/8" },
                             { icon: <Store className="w-4 h-4 text-primary" />, label: "Store Pickup", sub: "Collect in-store", path: "/store-locator", bg: "bg-primary/8" },
                             { icon: <HelpCircle className="w-4 h-4 text-primary" />, label: "Help Center", sub: "FAQs & support", path: "/support", bg: "bg-primary/8" },

@@ -8,8 +8,8 @@ import MobileBottomNav from "@/components/MobileBottomNav";
 
 const plans = [
   { title: "Standard Warranty", duration: "1 Year", price: "Included", features: ["Manufacturing defects", "Hardware failures", "Free repairs"] },
-  { title: "MediaMall Care+", duration: "2 Years", price: "From ₦15,000", features: ["Everything in Standard", "Accidental damage", "Battery replacement", "Priority service"] },
-  { title: "Business Shield", duration: "3 Years", price: "From ₦25,000", features: ["Everything in Care+", "On-site support", "Loaner device", "Data recovery"] },
+  { title: "MediaMall Care+", duration: "2 Years", price: "From $149", features: ["Everything in Standard", "Accidental damage", "Battery replacement", "Priority service"] },
+  { title: "Business Shield", duration: "3 Years", price: "From $249", features: ["Everything in Care+", "On-site support", "Loaner device", "Data recovery"] },
 ];
 
 const Warranty = () => {

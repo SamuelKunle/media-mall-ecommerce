@@ -12,35 +12,35 @@ const deliveryOptions = [
     icon: Truck,
     title: "Standard Delivery",
     time: "2–5 business days",
-    price: "₦2,500",
-    note: "Free on orders over ₦50,000",
-    areas: "Nationwide (all 36 states + FCT)",
+    price: "$10 flat",
+    note: "Free on qualifying orders over $99",
+    areas: "Contiguous U.S. (exclusions may apply)",
   },
   {
     icon: Clock,
     title: "Express Delivery",
-    time: "Within 24 hours",
-    price: "₦5,500",
-    note: "Order before 2pm for same-day dispatch",
-    areas: "Lagos, Abuja, Port Harcourt",
+    time: "1–2 business days",
+    price: "$19",
+    note: "Order before cutoff for same-day dispatch where offered",
+    areas: "Select metro areas",
   },
   {
     icon: MapPin,
     title: "Store Pickup",
     time: "Same day (if in stock)",
     price: "Free",
-    note: "Collect from any of our 30+ stores",
-    areas: "All MediaMall locations",
+    note: "Collect from participating stores",
+    areas: "All MediaMall retail locations",
   },
 ];
 
 const shippingZones = [
-  { zone: "Lagos", standard: "2–3 days", express: "Same day / Next day" },
-  { zone: "Abuja / PH", standard: "3–4 days", express: "Next day" },
-  { zone: "South-West", standard: "3–5 days", express: "—" },
-  { zone: "South-East / South-South", standard: "4–6 days", express: "—" },
-  { zone: "North-Central", standard: "5–7 days", express: "—" },
-  { zone: "North-East / North-West", standard: "6–10 days", express: "—" },
+  { zone: "West Coast", standard: "2–4 days", express: "1–2 days" },
+  { zone: "Mountain", standard: "3–5 days", express: "1–2 days" },
+  { zone: "Central", standard: "2–5 days", express: "1–2 days" },
+  { zone: "East Coast", standard: "2–5 days", express: "1–2 days" },
+  { zone: "South", standard: "3–6 days", express: "1–2 days" },
+  { zone: "AK / HI", standard: "5–10 days", express: "—" },
 ];
 
 const policies = [
@@ -129,7 +129,7 @@ const ShippingInfo = () => {
               <div>
                 <h3 className="text-sm font-bold text-foreground mb-1">Shipping Insurance</h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  All orders over ₦100,000 are automatically insured against damage or loss during transit at no extra cost. For orders below this threshold, you can add shipping insurance for ₦1,500 at checkout.
+                  High-value orders may include complimentary shipping insurance during transit. At checkout you can add optional coverage on other orders for a small fee.
                 </p>
               </div>
             </div>

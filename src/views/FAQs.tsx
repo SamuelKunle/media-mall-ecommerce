@@ -13,16 +13,16 @@ const faqCategories = [
     title: "Orders & Delivery",
     faqs: [
       { q: "How do I track my order?", a: "Log into your account, go to 'My Orders', and click on the order to see real-time tracking. You'll also receive SMS and email updates at each stage." },
-      { q: "How long does delivery take?", a: "Standard delivery takes 2–5 business days in Lagos and 5–10 days nationwide. Express delivery (Lagos only) arrives within 24 hours for an additional ₦3,000." },
+      { q: "How long does delivery take?", a: "Standard delivery usually arrives in 2–5 business days. Express options may be offered in select areas for an additional fee shown at checkout." },
       { q: "Can I change my delivery address?", a: "You can update your delivery address within 1 hour of placing the order. After that, contact support — changes depend on whether the order has shipped." },
-      { q: "Do you deliver on weekends?", a: "Yes, Saturday deliveries are available in Lagos, Abuja, and Port Harcourt. Sunday deliveries are not currently offered." },
-      { q: "What areas do you deliver to?", a: "We deliver to all 36 states and the FCT. Some remote areas may require an extra 2–3 business days." },
+      { q: "Do you deliver on weekends?", a: "Saturday delivery may be available in select metros. Sunday delivery is not guaranteed everywhere—check options at checkout." },
+      { q: "What areas do you deliver to?", a: "We ship across the contiguous United States; Alaska, Hawaii, and remote areas may take longer." },
     ],
   },
   {
     title: "Payments",
     faqs: [
-      { q: "What payment methods do you accept?", a: "We accept bank transfers, debit/credit cards (Visa, Mastercard, Verve), USSD payments, and Pay on Delivery (Lagos only, cash or POS)." },
+      { q: "What payment methods do you accept?", a: "We accept major debit and credit cards (Visa, Mastercard, American Express), bank transfers where enabled, and other methods shown at checkout." },
       { q: "Is my payment information secure?", a: "Absolutely. All transactions are encrypted with 256-bit SSL. We never store your full card details — payments are processed by PCI-compliant providers." },
       { q: "Can I pay in installments?", a: "Yes! Select products support installment payments through our financing partners. Look for the 'Pay in Installments' badge on eligible product pages." },
       { q: "I was debited but my order wasn't confirmed", a: "This is usually a temporary hold. The funds are auto-reversed within 24 hours. If not, contact us with the transaction reference for a manual resolution." },

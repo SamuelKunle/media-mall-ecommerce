@@ -35,7 +35,7 @@ const nonReturnable = [
 
 const faqs = [
   { q: "How long do I have to return an item?", a: "You have 7 calendar days from delivery to initiate a return for most products. Defective items can be returned within the warranty period." },
-  { q: "Who pays for return shipping?", a: "If the return is due to a defect or our error, we cover all shipping costs. For change-of-mind returns, a ₦2,000 pickup fee applies, or you can drop off for free at any store." },
+  { q: "Who pays for return shipping?", a: "If the return is due to a defect or our error, we cover all shipping costs. For change-of-mind returns, a $15 pickup fee may apply, or you can drop off for free at any store." },
   { q: "Can I exchange instead of getting a refund?", a: "Yes! You can exchange for the same product in a different variant (color, size, storage) or a different product. If the new item costs more, you pay the difference." },
   { q: "What if my item arrived damaged?", a: "Contact us within 24 hours with photos of the damage. We'll arrange a free pickup and send a replacement or issue a full refund — your choice." },
   { q: "Is there a restocking fee?", a: "Opened electronics are subject to a 10% restocking fee for change-of-mind returns. This does not apply to defective items or items returned sealed." },

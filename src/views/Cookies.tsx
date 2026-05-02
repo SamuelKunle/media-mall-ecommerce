@@ -38,7 +38,7 @@ const Cookies = () => (
 
       <section className="container max-w-3xl py-10">
         <p className="text-sm text-muted-foreground leading-relaxed mb-10">
-          This Cookie Policy explains how MediaMall Nigeria uses cookies and similar tracking technologies when you visit our website or use our services.
+          This Cookie Policy explains how MediaMall uses cookies and similar tracking technologies when you visit our website or use our services.
         </p>
 
         {/* Cookie Types */}
@@ -71,7 +71,7 @@ const Cookies = () => (
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center mb-10">
           <h3 className="text-sm font-bold text-foreground mb-2">Questions About Cookies?</h3>
           <p className="text-xs text-muted-foreground mb-4">If you have any questions about our use of cookies, contact our Data Protection Officer.</p>
-          <p className="text-sm font-semibold text-primary">privacy@mediamall.ng</p>
+          <p className="text-sm font-semibold text-primary">privacy@mediamall.com</p>
         </div>
 
         <div className="text-center">

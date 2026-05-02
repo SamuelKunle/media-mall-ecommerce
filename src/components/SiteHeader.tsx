@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Search, ShoppingCart, Heart, User, MapPin, ChevronDown, Menu, X, Phone, ChevronRight, ArrowRight, Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import { categories } from "@/data/products";
+import { formatPrice, FREE_SHIPPING_THRESHOLD_USD } from "@/lib/commerce";
 import SearchDropdown from "@/components/SearchDropdown";
 import { useCart } from "@/contexts/CartContext";
 import MobileMenu from "@/components/MobileMenu";
@@ -70,8 +71,8 @@ const SiteHeader = () => {
       <div className="hidden md:block bg-primary text-primary-foreground">
         <div className="container flex items-center justify-between py-1.5 text-xs">
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1"><MapPin className="w-3 h-3" /> Lagos, Nigeria</span>
-            <span className="flex items-center gap-1"><Phone className="w-3 h-3" /> 0800 MEDIAMALL</span>
+            <span className="flex items-center gap-1"><MapPin className="w-3 h-3" /> Austin, TX · Ships nationwide</span>
+            <span className="flex items-center gap-1"><Phone className="w-3 h-3" /> 1-800-MEDIA-123</span>
           </div>
           <div className="flex items-center gap-4">
             <Link href="/store-locator" className="hover:underline">Store Locator</Link>
@@ -269,7 +270,7 @@ const SiteHeader = () => {
                     Browse All Categories <ArrowRight className="w-3 h-3" />
                   </Link>
                   <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                    <span>🔥 Free delivery on orders over ₦50K</span>
+                    <span>🔥 Free delivery on orders over {formatPrice(FREE_SHIPPING_THRESHOLD_USD)}</span>
                     <span>✅ 100% genuine products</span>
                   </div>
                 </div>

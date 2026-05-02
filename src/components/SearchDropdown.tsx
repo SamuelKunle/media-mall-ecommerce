@@ -3,6 +3,7 @@ import { Search, ArrowRight, TrendingUp, Clock, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { sampleProducts, categories } from "@/data/products";
+import { formatPrice } from "@/lib/commerce";
 
 const trendingSearches = ["iPhone 15", "MacBook Pro", "AirPods", "PS5", "Galaxy S24", "RTX 4060"];
 
@@ -157,7 +158,7 @@ const SearchDropdown = ({ onClose }: SearchDropdownProps) => {
                       <p className="text-sm font-medium text-foreground truncate">{product.name}</p>
                       <p className="text-xs text-muted-foreground">{product.brand}</p>
                     </div>
-                    <span className="text-sm font-bold text-primary whitespace-nowrap">₦{product.price.toLocaleString()}</span>
+                    <span className="text-sm font-bold text-primary whitespace-nowrap">{formatPrice(product.price)}</span>
                   </Link>
                 ))}
               </div>

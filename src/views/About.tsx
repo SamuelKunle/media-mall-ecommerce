@@ -22,14 +22,14 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2018", event: "MediaMall founded in Lagos with our first flagship store in Ikeja" },
+  { year: "2018", event: "MediaMall opens its first flagship store in Austin, Texas" },
   { year: "2019", event: "Launched e-commerce platform, expanded to 5 locations" },
-  { year: "2020", event: "Became authorized reseller for Apple, Samsung & Sony in Nigeria" },
-  { year: "2021", event: "Reached 100K customers, opened Abuja & Port Harcourt stores" },
+  { year: "2020", event: "Became authorized reseller for Apple, Samsung & Sony" },
+  { year: "2021", event: "Reached 100K customers, opened Denver and Seattle stores" },
   { year: "2022", event: "Launched B2B division and Student Program" },
   { year: "2023", event: "Expanded to 20+ stores, introduced Trade-in & Warranty services" },
-  { year: "2024", event: "500K+ customers served, 30+ stores across Nigeria" },
-  { year: "2025", event: "Launched installment payments and same-day delivery in Lagos" },
+  { year: "2024", event: "500K+ customers served, 30+ stores nationwide" },
+  { year: "2025", event: "Launched installment payments and same-day delivery in major metros" },
 ];
 
 const About = () => (
@@ -42,10 +42,10 @@ const About = () => (
             <Building2 className="w-4 h-4" /> About Us
           </div>
           <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-4 text-balance">
-            Nigeria's Premium Electronics Destination
+            Your Trusted Electronics Destination
           </h1>
           <p className="text-lg opacity-80 max-w-2xl mx-auto">
-            We started with a simple mission: make genuine, quality electronics accessible to every Nigerian at fair prices with world-class service.
+            We started with a simple mission: make genuine, quality electronics accessible at fair prices with world-class service.
           </p>
         </div>
       </section>

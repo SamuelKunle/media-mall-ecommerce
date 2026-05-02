@@ -16,8 +16,8 @@ const topics = [
 
 const contactMethods = [
   { icon: MessageSquare, label: "Live Chat", detail: "Available 8am – 10pm", action: "Start Chat" },
-  { icon: Phone, label: "Call Us", detail: "0800 MEDIAMALL", action: "Call Now" },
-  { icon: Mail, label: "Email", detail: "support@mediamall.ng", action: "Send Email" },
+  { icon: Phone, label: "Call Us", detail: "1-800-MEDIA-123", action: "Call Now" },
+  { icon: Mail, label: "Email", detail: "support@mediamall.com", action: "Send Email" },
 ];
 
 const Support = () => {

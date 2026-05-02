@@ -9,7 +9,7 @@ import MobileBottomNav from "@/components/MobileBottomNav";
 import {
   formatPrice,
   shippingFromSubtotal,
-  FREE_SHIPPING_THRESHOLD_NGN,
+  FREE_SHIPPING_THRESHOLD_USD,
 } from "@/lib/commerce";
 import { useCart } from "@/contexts/CartContext";
 import { recordDemoOrder } from "@/integrations/orders/demo";
@@ -265,7 +265,7 @@ const Checkout = () => {
                   </h2>
                   <div className="grid grid-cols-2 gap-3">
                     {[
-                      { key: "delivery", label: "Home Delivery", desc: "2-5 business days", icon: Truck, extra: `Free over ${formatPrice(FREE_SHIPPING_THRESHOLD_NGN)}` },
+                      { key: "delivery", label: "Home Delivery", desc: "2-5 business days", icon: Truck, extra: `Free over ${formatPrice(FREE_SHIPPING_THRESHOLD_USD)}` },
                       { key: "pickup", label: "Store Pickup", desc: "Ready in 2 hours", icon: MapPin, extra: "Free always" },
                     ].map((m) => (
                       <button key={m.key} onClick={() => setDeliveryMethod(m.key as "delivery" | "pickup")}
@@ -301,12 +301,12 @@ const Checkout = () => {
                   {deliveryMethod === "delivery" ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {[
-                        { field: "fullName", label: "Full Name", placeholder: "John Adeyemi", full: false },
-                        { field: "phone", label: "Phone Number", placeholder: "+234 801 234 5678", full: false },
-                        { field: "email", label: "Email Address", placeholder: "john@example.com", full: true },
-                        { field: "street", label: "Street Address", placeholder: "15 Admiralty Way, Lekki Phase 1", full: true },
-                        { field: "city", label: "City", placeholder: "Lagos", full: false },
-                        { field: "state", label: "State", placeholder: "Lagos State", full: false },
+                        { field: "fullName", label: "Full Name", placeholder: "Jane Smith", full: false },
+                        { field: "phone", label: "Phone Number", placeholder: "+1 (555) 010-2030", full: false },
+                        { field: "email", label: "Email Address", placeholder: "jane@example.com", full: true },
+                        { field: "street", label: "Street Address", placeholder: "123 Main Street, Apt 4", full: true },
+                        { field: "city", label: "City", placeholder: "Austin", full: false },
+                        { field: "state", label: "State", placeholder: "TX", full: false },
                       ].map((f) => (
                         <div key={f.field} className={f.full ? "sm:col-span-2" : ""}>
                           <label className="text-xs font-semibold text-foreground mb-1.5 block">{f.label} <span className="text-deal">*</span></label>
@@ -320,9 +320,9 @@ const Checkout = () => {
                   ) : (
                     <div className="space-y-2">
                       {[
-                        { name: "MediaMall Lekki — Admiralty Way", hours: "Mon-Sat: 9AM - 8PM" },
-                        { name: "MediaMall Ikeja — Computer Village", hours: "Mon-Sat: 8AM - 7PM" },
-                        { name: "MediaMall Abuja — Wuse II", hours: "Mon-Sat: 9AM - 7PM" },
+                        { name: "MediaMall Austin — Domain Northside", hours: "Mon–Sat: 9AM – 8PM" },
+                        { name: "MediaMall Seattle — University Village", hours: "Mon–Sat: 10AM – 8PM" },
+                        { name: "MediaMall Denver — Cherry Creek", hours: "Mon–Sat: 9AM – 7PM" },
                       ].map((store) => (
                         <button key={store.name} onClick={() => setSelectedStore(store.name)}
                           className={`w-full p-4 rounded-xl border-2 text-left transition-all flex items-start gap-3 ${
@@ -377,7 +377,7 @@ const Checkout = () => {
                   </h2>
                   <div className="space-y-2">
                     {[
-                      { key: "card", label: "Debit / Credit Card", desc: "Visa, Mastercard, Verve", icon: CreditCard },
+                      { key: "card", label: "Debit / Credit Card", desc: "Visa, Mastercard, Amex", icon: CreditCard },
                       { key: "transfer", label: "Bank Transfer", desc: "Direct bank transfer", icon: Building2 },
                       { key: "payondelivery", label: "Pay on Delivery", desc: "Cash or POS on delivery", icon: Package },
                     ].map((m) => (
@@ -417,7 +417,7 @@ const Checkout = () => {
                             {
                               field: "cardName" as const,
                               label: "Cardholder Name",
-                              placeholder: "John Adeyemi",
+                              placeholder: "Jane Smith",
                               full: true,
                               maxLength: 80,
                             },
@@ -462,9 +462,9 @@ const Checkout = () => {
                       <div className="rounded-xl bg-secondary/50 border border-border p-4 space-y-2.5 text-sm mt-2">
                         <p className="font-bold text-foreground text-base">Bank Transfer Details</p>
                         <div className="space-y-1.5">
-                          <div className="flex justify-between"><span className="text-muted-foreground">Bank</span><span className="text-foreground font-semibold">GTBank</span></div>
+                          <div className="flex justify-between"><span className="text-muted-foreground">Bank</span><span className="text-foreground font-semibold">Demo Community Bank</span></div>
                           <div className="flex justify-between"><span className="text-muted-foreground">Account</span><span className="text-foreground font-semibold font-mono">0123456789</span></div>
-                          <div className="flex justify-between"><span className="text-muted-foreground">Name</span><span className="text-foreground font-semibold">MediaMall Nigeria Ltd</span></div>
+                          <div className="flex justify-between"><span className="text-muted-foreground">Name</span><span className="text-foreground font-semibold">MediaMall Inc.</span></div>
                         </div>
                         <p className="text-xs text-muted-foreground pt-1 border-t border-border">Transfer exactly <span className="font-bold text-foreground">{formatPrice(total)}</span> and use your order number as reference.</p>
                       </div>

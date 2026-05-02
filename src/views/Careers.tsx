@@ -18,12 +18,12 @@ const perks = [
 ];
 
 const openings = [
-  { title: "Senior Frontend Developer", dept: "Engineering", location: "Lagos (Hybrid)", type: "Full-time", slug: "senior-frontend-developer" },
-  { title: "Product Manager", dept: "Product", location: "Lagos", type: "Full-time", slug: "product-manager" },
-  { title: "Store Manager", dept: "Retail", location: "Abuja", type: "Full-time", slug: "store-manager" },
+  { title: "Senior Frontend Developer", dept: "Engineering", location: "Austin, TX (Hybrid)", type: "Full-time", slug: "senior-frontend-developer" },
+  { title: "Product Manager", dept: "Product", location: "Seattle, WA", type: "Full-time", slug: "product-manager" },
+  { title: "Store Manager", dept: "Retail", location: "Denver, CO", type: "Full-time", slug: "store-manager" },
   { title: "Customer Experience Lead", dept: "Support", location: "Remote", type: "Full-time", slug: "customer-experience-lead" },
-  { title: "Digital Marketing Specialist", dept: "Marketing", location: "Lagos (Hybrid)", type: "Full-time", slug: "digital-marketing-specialist" },
-  { title: "Supply Chain Analyst", dept: "Operations", location: "Lagos", type: "Full-time", slug: "supply-chain-analyst" },
+  { title: "Digital Marketing Specialist", dept: "Marketing", location: "Austin, TX (Hybrid)", type: "Full-time", slug: "digital-marketing-specialist" },
+  { title: "Supply Chain Analyst", dept: "Operations", location: "Dallas, TX", type: "Full-time", slug: "supply-chain-analyst" },
   { title: "Retail Sales Associate", dept: "Retail", location: "Multiple Locations", type: "Full-time", slug: "retail-sales-associate" },
   { title: "UI/UX Designer", dept: "Design", location: "Remote", type: "Contract", slug: "ui-ux-designer" },
 ];
@@ -50,7 +50,7 @@ const Careers = () => {
               <Briefcase className="w-4 h-4" /> Careers
             </div>
             <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-4 text-balance">Build the Future of Tech Retail</h1>
-            <p className="text-lg opacity-80 max-w-2xl mx-auto">Join a fast-growing team that's reshaping how Nigerians buy electronics. We're passionate, ambitious, and always shipping.</p>
+            <p className="text-lg opacity-80 max-w-2xl mx-auto">Join a fast-growing team building a modern electronics shopping experience. We're passionate, ambitious, and always shipping.</p>
           </div>
         </section>
 

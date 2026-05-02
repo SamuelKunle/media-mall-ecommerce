@@ -7,18 +7,21 @@ import PageTransition from "@/components/PageTransition";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import MobileBottomNav from "@/components/MobileBottomNav";
+import { formatPrice } from "@/lib/commerce";
+
+const MIN_ORDER_USD = 100;
 
 const plans = [
-  { months: 3, interest: "0%", minOrder: "₦100,000", badge: "Most Popular" },
-  { months: 6, interest: "5%", minOrder: "₦200,000", badge: null },
-  { months: 9, interest: "8%", minOrder: "₦300,000", badge: null },
-  { months: 12, interest: "12%", minOrder: "₦500,000", badge: "Best Value" },
+  { months: 3, interest: "0%", minOrder: "$100", badge: "Most Popular" },
+  { months: 6, interest: "5%", minOrder: "$200", badge: null },
+  { months: 9, interest: "8%", minOrder: "$300", badge: null },
+  { months: 12, interest: "12%", minOrder: "$500", badge: "Best Value" },
 ];
 
 const eligibility = [
-  "Valid government-issued ID (NIN, driver's license, or international passport)",
-  "Proof of income (pay slip, bank statement, or employment letter)",
-  "Active Nigerian bank account with debit card",
+  "Valid government-issued photo ID (driver's license, state ID, or passport)",
+  "Proof of income (pay stub, bank statement, or employment letter)",
+  "Active U.S. bank account with debit card",
   "Minimum 6 months employment history or business registration",
   "No outstanding defaults with our financing partners",
 ];
@@ -31,16 +34,16 @@ const steps = [
 ];
 
 const faqs = [
-  { q: "What products are eligible for installments?", a: "Most electronics over ₦100,000 are eligible, including phones, laptops, TVs, and gaming consoles. Look for the 'Pay in Installments' badge on product pages." },
+  { q: "What products are eligible for installments?", a: `Most electronics over ${formatPrice(MIN_ORDER_USD)} are eligible, including phones, laptops, TVs, and gaming consoles. Look for the 'Pay in Installments' badge on product pages.` },
   { q: "Is there a down payment?", a: "Yes, a minimum down payment of 25% is required for all installment plans. The remaining balance is spread across your chosen plan duration." },
-  { q: "What happens if I miss a payment?", a: "A late fee of ₦2,500 applies after 7 days. After 30 days of non-payment, the account is referred to our collections partner. We always try to work with you first — contact us if you're having difficulty." },
+  { q: "What happens if I miss a payment?", a: "A late fee of $25 applies after 7 days. After 30 days of non-payment, the account may be referred to our collections partner. We always try to work with you first — contact us if you're having difficulty." },
   { q: "Can I pay off my plan early?", a: "Absolutely! You can pay off your remaining balance at any time with no early repayment penalties. Any unaccrued interest will be waived." },
   { q: "How is approval determined?", a: "Approval is based on your income, employment stability, and credit history with our financing partners. Most applications are approved within 10 minutes." },
 ];
 
 const InstallmentPlans = () => {
   const [selectedPlan, setSelectedPlan] = useState(0);
-  const [amount, setAmount] = useState("500000");
+  const [amount, setAmount] = useState("1500");
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const plan = plans[selectedPlan];
@@ -74,13 +77,13 @@ const InstallmentPlans = () => {
           <h2 className="section-title text-center mb-10">Payment Calculator</h2>
           <div className="bg-card border border-border rounded-xl p-6 md:p-8">
             <div className="mb-6">
-              <label className="text-xs font-semibold text-foreground mb-2 block">Product Price (₦)</label>
+              <label className="text-xs font-semibold text-foreground mb-2 block">Product Price (USD)</label>
               <input
                 type="number"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                min="100000"
-                max="10000000"
+                min="100"
+                max="500000"
                 className="w-full px-4 py-3 rounded-xl bg-secondary border border-border text-lg font-bold text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
               />
             </div>
@@ -108,24 +111,26 @@ const InstallmentPlans = () => {
               ))}
             </div>
 
-            {principal >= 100000 ? (
+            {principal >= MIN_ORDER_USD ? (
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-secondary/50 rounded-xl p-5">
                 <div className="text-center">
                   <p className="text-xs text-muted-foreground mb-1">Down Payment (25%)</p>
-                  <p className="text-lg font-black text-foreground">₦{downPayment.toLocaleString()}</p>
+                  <p className="text-lg font-black text-foreground">{formatPrice(downPayment)}</p>
                 </div>
                 <div className="text-center">
                   <p className="text-xs text-muted-foreground mb-1">Monthly Payment</p>
-                  <p className="text-lg font-black text-primary">₦{monthlyPayment.toLocaleString()}</p>
+                  <p className="text-lg font-black text-primary">{formatPrice(monthlyPayment)}</p>
                 </div>
                 <div className="text-center">
                   <p className="text-xs text-muted-foreground mb-1">Total Amount</p>
-                  <p className="text-lg font-black text-foreground">₦{(totalAmount + downPayment).toLocaleString()}</p>
+                  <p className="text-lg font-black text-foreground">{formatPrice(totalAmount + downPayment)}</p>
                 </div>
               </div>
             ) : (
               <div className="text-center py-4">
-                <p className="text-sm text-muted-foreground">Enter an amount of ₦100,000 or more to see payment breakdown</p>
+                <p className="text-sm text-muted-foreground">
+                  Enter an amount of {formatPrice(MIN_ORDER_USD)} or more to see payment breakdown
+                </p>
               </div>
             )}
           </div>

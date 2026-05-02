@@ -3,19 +3,23 @@ import type { Product } from "@/components/ProductCard";
 /** Demo cap per SKU so cart math stays realistic without a backend */
 export const DEMO_MAX_UNITS_PER_SKU = 10;
 
-export const FREE_SHIPPING_THRESHOLD_NGN = 50_000;
-export const FLAT_SHIPPING_NGN = 3_500;
+/** Subtotals at or above this (USD) get free shipping in the demo rules */
+export const FREE_SHIPPING_THRESHOLD_USD = 99;
+
+/** Flat shipping when below threshold (USD, whole dollars) */
+export const FLAT_SHIPPING_USD = 10;
 
 export function formatPrice(price: number): string {
-  return new Intl.NumberFormat("en-NG", {
+  return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "NGN",
+    currency: "USD",
     minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
   }).format(price);
 }
 
 export function shippingFromSubtotal(subtotal: number): number {
-  return subtotal > FREE_SHIPPING_THRESHOLD_NGN ? 0 : FLAT_SHIPPING_NGN;
+  return subtotal > FREE_SHIPPING_THRESHOLD_USD ? 0 : FLAT_SHIPPING_USD;
 }
 
 export function lineSavings(product: Product, qty: number): number {

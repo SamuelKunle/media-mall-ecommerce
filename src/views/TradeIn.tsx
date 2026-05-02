@@ -8,9 +8,9 @@ import SiteFooter from "@/components/SiteFooter";
 import MobileBottomNav from "@/components/MobileBottomNav";
 
 const tradeCategories = [
-  { icon: Smartphone, label: "Smartphones", examples: "iPhone, Samsung Galaxy, Pixel", value: "Up to ₦350,000" },
-  { icon: Laptop, label: "Laptops", examples: "MacBook, ThinkPad, XPS", value: "Up to ₦500,000" },
-  { icon: Headphones, label: "Audio & Wearables", examples: "AirPods, Galaxy Watch", value: "Up to ₦120,000" },
+  { icon: Smartphone, label: "Smartphones", examples: "iPhone, Samsung Galaxy, Pixel", value: "Up to $350" },
+  { icon: Laptop, label: "Laptops", examples: "MacBook, ThinkPad, XPS", value: "Up to $500" },
+  { icon: Headphones, label: "Audio & Wearables", examples: "AirPods, Galaxy Watch", value: "Up to $120" },
 ];
 
 const steps = [

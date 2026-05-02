@@ -13,13 +13,16 @@ import PageTransition from "@/components/PageTransition";
 import StaggerGrid from "@/components/StaggerGrid";
 import RecentlyViewed from "@/components/RecentlyViewed";
 import { useRecentlyViewed } from "@/hooks/useRecentlyViewed";
-import { sampleProducts, categoryShortcuts } from "@/data/products";
+import { sampleProducts, categoryShortcuts, getProductById } from "@/data/products";
+import { formatPrice } from "@/lib/commerce";
 import { ChevronRight, Zap, TrendingUp, Sparkles, Star } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Index = () => {
   const { recentIds } = useRecentlyViewed();
+  const promoAirPods = getProductById(10);
+  const promoGalaxy = getProductById(2);
   const flashSaleProducts = sampleProducts.filter((p) => p.badges?.includes("Flash Sale") || p.oldPrice);
   const bestSellers = sampleProducts.filter((p) => p.badges?.includes("Best Seller"));
   const newArrivals = sampleProducts.filter((p) => p.badges?.includes("New") || p.badges?.includes("Official"));
@@ -40,18 +43,22 @@ const Index = () => {
             <Link href="/product/10" className="gradient-deal rounded-2xl p-5 flex flex-col justify-between text-primary-foreground">
               <div>
                 <span className="badge-flash mb-2 inline-block">🔥 Hot Deal</span>
-                <h3 className="text-sm font-bold mt-2">AirPods Pro 2</h3>
+                <h3 className="text-sm font-bold mt-2">{promoAirPods?.name ?? "AirPods Pro 2"}</h3>
                 <p className="text-xs opacity-80 mt-0.5">USB-C, Active Noise Cancel</p>
               </div>
-              <p className="text-lg font-extrabold mt-3">₦249,000</p>
+              <p className="text-lg font-extrabold mt-3">
+                {promoAirPods ? formatPrice(promoAirPods.price) : formatPrice(249)}
+              </p>
             </Link>
             <Link href="/product/2" className="bg-card rounded-2xl border border-border p-5 flex flex-col justify-between">
               <div>
                 <span className="badge-new mb-2 inline-block">New Arrival</span>
-                <h3 className="text-sm font-bold text-foreground mt-2">Galaxy S24 Ultra</h3>
+                <h3 className="text-sm font-bold text-foreground mt-2">{promoGalaxy?.name ?? "Galaxy S24 Ultra"}</h3>
                 <p className="text-xs text-muted-foreground mt-0.5">Titanium, 200MP Camera</p>
               </div>
-              <p className="price-current mt-3">₦1,399,000</p>
+              <p className="price-current mt-3">
+                {promoGalaxy ? formatPrice(promoGalaxy.price) : formatPrice(1299)}
+              </p>
             </Link>
           </div>
         </section>

@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         "Browse phones, laptops, audio, gaming & more — curated electronics categories.",
       openGraph: {
         title: `All categories | ${site}`,
-        description: "Browse Nigeria's widest range of genuine electronics.",
+        description: "Browse genuine electronics across phones, laptops, audio, gaming, and more.",
       },
     };
   }

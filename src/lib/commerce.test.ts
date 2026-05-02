@@ -5,8 +5,8 @@ import {
   lineSavings,
   cartSubtotal,
   cartSavings,
-  FREE_SHIPPING_THRESHOLD_NGN,
-  FLAT_SHIPPING_NGN,
+  FREE_SHIPPING_THRESHOLD_USD,
+  FLAT_SHIPPING_USD,
   DEMO_MAX_UNITS_PER_SKU,
   isPurchasable,
 } from "./commerce";
@@ -21,15 +21,15 @@ const p = (overrides: Partial<Product> & Pick<Product, "id" | "name" | "price">)
 });
 
 describe("commerce", () => {
-  it("formatPrice uses NGN", () => {
-    expect(formatPrice(1299000)).toMatch(/₦/);
-    expect(formatPrice(1000)).toMatch(/1,?000/);
+  it("formatPrice uses USD", () => {
+    expect(formatPrice(1299)).toMatch(/\$/);
+    expect(formatPrice(1000)).toMatch(/1,000/);
   });
 
   it("shippingFromSubtotal matches free threshold", () => {
-    expect(shippingFromSubtotal(FREE_SHIPPING_THRESHOLD_NGN + 1)).toBe(0);
-    expect(shippingFromSubtotal(FREE_SHIPPING_THRESHOLD_NGN)).toBe(FLAT_SHIPPING_NGN);
-    expect(shippingFromSubtotal(0)).toBe(FLAT_SHIPPING_NGN);
+    expect(shippingFromSubtotal(FREE_SHIPPING_THRESHOLD_USD + 1)).toBe(0);
+    expect(shippingFromSubtotal(FREE_SHIPPING_THRESHOLD_USD)).toBe(FLAT_SHIPPING_USD);
+    expect(shippingFromSubtotal(0)).toBe(FLAT_SHIPPING_USD);
   });
 
   it("lineSavings respects oldPrice", () => {

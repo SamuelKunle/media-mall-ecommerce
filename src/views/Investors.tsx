@@ -11,11 +11,11 @@ const highlights = [
   { icon: TrendingUp, value: "45%", label: "YoY Revenue Growth" },
   { icon: Users, value: "500K+", label: "Active Customers" },
   { icon: Globe, value: "30+", label: "Retail Locations" },
-  { icon: DollarSign, value: "₦12B+", label: "Annual GMV" },
+  { icon: DollarSign, value: "$120M+", label: "Annual GMV" },
 ];
 
 const reasons = [
-  "Fastest-growing electronics retail brand in Nigeria",
+  "Fast-growing omnichannel electronics retail brand",
   "Strong unit economics with improving margins quarter over quarter",
   "Diversified revenue: retail, B2B, services (warranty, trade-in)",
   "Asset-light e-commerce model supplemented by strategic physical stores",
@@ -24,9 +24,9 @@ const reasons = [
 ];
 
 const timeline = [
-  { round: "Seed", year: "2018", amount: "₦50M", desc: "Initial store launch and team build" },
-  { round: "Series A", year: "2020", amount: "₦500M", desc: "E-commerce platform and multi-city expansion" },
-  { round: "Series B", year: "2023", amount: "₦2.5B", desc: "Nationwide scale, B2B launch, brand partnerships" },
+  { round: "Seed", year: "2018", amount: "$2M", desc: "Initial store launch and team build" },
+  { round: "Series A", year: "2020", amount: "$15M", desc: "E-commerce platform and multi-city expansion" },
+  { round: "Series B", year: "2023", amount: "$45M", desc: "Nationwide scale, B2B launch, brand partnerships" },
   { round: "Series C", year: "2025", amount: "Ongoing", desc: "Pan-African expansion and fintech integration" },
 ];
 
@@ -41,7 +41,7 @@ const Investors = () => (
           </div>
           <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-4 text-balance">Invest in Africa's Electronics Future</h1>
           <p className="text-lg opacity-80 max-w-2xl mx-auto">
-            MediaMall is reshaping electronics retail across Nigeria with a hybrid online-offline model built for scale.
+            MediaMall is reshaping electronics retail with a hybrid online-offline model built for scale.
           </p>
         </div>
       </section>
@@ -95,7 +95,7 @@ const Investors = () => (
         <div className="container max-w-xl">
           <h2 className="section-title mb-3">Interested in Investing?</h2>
           <p className="text-sm text-muted-foreground mb-4">We're currently raising our Series C. Reach out to our investor relations team for our pitch deck and financials.</p>
-          <p className="text-sm font-semibold text-primary mb-6">investors@mediamall.ng</p>
+          <p className="text-sm font-semibold text-primary mb-6">investors@mediamall.com</p>
           <Link href="/support" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border text-sm font-semibold text-foreground hover:bg-secondary transition-colors">
             Contact Us <ArrowRight className="w-3.5 h-3.5" />
           </Link>

@@ -30,7 +30,7 @@ const SearchResults = () => {
       const matchesQuery =
         p.name.toLowerCase().includes(q) ||
         p.brand.toLowerCase().includes(q) ||
-        p.category.toLowerCase().includes(q) ||
+        (p.category?.toLowerCase() ?? "").includes(q) ||
         (p.specs && p.specs.some((s) => s.toLowerCase().includes(q)));
 
       const matchesCategory = !selectedCategory || p.category === selectedCategory;

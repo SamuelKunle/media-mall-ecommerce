@@ -10,13 +10,13 @@ import MobileBottomNav from "@/components/MobileBottomNav";
 const sections = [
   { title: "1. Information We Collect", content: "We collect information you provide directly (name, email, phone, delivery address, payment details) when you create an account, place an order, or contact support. We also automatically collect device information, IP address, browser type, pages visited, and interaction data through cookies and similar technologies." },
   { title: "2. How We Use Your Information", content: "We use your information to process and deliver orders, manage your account, provide customer support, send order updates and delivery notifications, personalize your shopping experience, improve our products and services, prevent fraud and unauthorized transactions, and comply with legal obligations." },
-  { title: "3. Information Sharing", content: "We do not sell your personal data. We share information only with: payment processors to complete transactions, logistics partners to deliver your orders, authorized service partners for warranty and repair services, and law enforcement when required by Nigerian law. All partners are bound by strict data protection agreements." },
+  { title: "3. Information Sharing", content: "We do not sell your personal data. We share information only with: payment processors to complete transactions, logistics partners to deliver your orders, authorized service partners for warranty and repair services, and law enforcement when required by applicable law. All partners are bound by strict data protection agreements." },
   { title: "4. Data Security", content: "We implement industry-standard security measures including 256-bit SSL encryption for all data transmission, PCI-compliant payment processing through certified partners, secure data storage with access controls and monitoring, and regular security audits and vulnerability assessments." },
-  { title: "5. Your Rights", content: "Under the Nigeria Data Protection Regulation (NDPR), you have the right to access your personal data, request correction of inaccurate data, request deletion of your data, withdraw consent for marketing communications, and lodge a complaint with the National Information Technology Development Agency (NITDA)." },
+  { title: "5. Your Rights", content: "Depending on where you live, you may have the right to access, correct, or delete your personal data; opt out of certain processing; and lodge a complaint with a supervisory authority. Contact us to exercise these rights where applicable." },
   { title: "6. Data Retention", content: "We retain your personal data for as long as your account is active or as needed to provide services. Order records are kept for 7 years for tax and legal compliance. You may request deletion of your account and associated data at any time by contacting support." },
   { title: "7. Children's Privacy", content: "Our services are not directed to individuals under 18. We do not knowingly collect personal information from children. If we learn that we have collected data from a child, we will delete it promptly." },
   { title: "8. Changes to This Policy", content: "We may update this privacy policy from time to time. We will notify you of significant changes via email or a prominent notice on our website. Continued use of our services after changes constitutes acceptance of the updated policy." },
-  { title: "9. Contact Us", content: "For privacy-related questions or to exercise your rights, contact our Data Protection Officer at privacy@mediamall.ng or call 0800 MEDIAMALL." },
+  { title: "9. Contact Us", content: "For privacy-related questions or to exercise your rights, contact our Data Protection Officer at privacy@mediamall.com or call 1-800-MEDIA-123." },
 ];
 
 const Privacy = () => (
@@ -35,7 +35,7 @@ const Privacy = () => (
 
       <section className="container max-w-3xl py-10">
         <p className="text-sm text-muted-foreground leading-relaxed mb-10">
-          MediaMall Nigeria ("we", "us", "our") is committed to protecting your privacy. This policy explains how we collect, use, store, and protect your personal information in compliance with the Nigeria Data Protection Regulation (NDPR).
+          MediaMall ("we", "us", "our") is committed to protecting your privacy. This policy explains how we collect, use, store, and protect your personal information.
         </p>
 
         <div className="space-y-8">

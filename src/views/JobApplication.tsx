@@ -16,7 +16,7 @@ const jobDetails: Record<string, {
   about: string; responsibilities: string[]; requirements: string[]; niceToHave: string[];
 }> = {
   "senior-frontend-developer": {
-    title: "Senior Frontend Developer", dept: "Engineering", location: "Lagos (Hybrid)", type: "Full-time",
+    title: "Senior Frontend Developer", dept: "Engineering", location: "Austin, TX (Hybrid)", type: "Full-time",
     about: "We're looking for a Senior Frontend Developer to lead the build-out of our e-commerce platform. You'll work closely with design and product to ship fast, accessible, and beautiful user experiences that serve hundreds of thousands of customers.",
     responsibilities: [
       "Architect and build new features for our React-based e-commerce platform",
@@ -39,7 +39,7 @@ const jobDetails: Record<string, {
     ],
   },
   "product-manager": {
-    title: "Product Manager", dept: "Product", location: "Lagos", type: "Full-time",
+    title: "Product Manager", dept: "Product", location: "Seattle, WA", type: "Full-time",
     about: "Join our product team to define and drive the roadmap for MediaMall's digital products. You'll own key user journeys from discovery to checkout, using data and customer insights to make decisions.",
     responsibilities: [
       "Define product strategy and roadmap for e-commerce features",
@@ -55,11 +55,11 @@ const jobDetails: Record<string, {
       "Excellent communication and stakeholder management",
       "Familiarity with agile development processes",
     ],
-    niceToHave: ["Experience in the Nigerian or African tech ecosystem", "Technical background", "SQL proficiency"],
+    niceToHave: ["Experience in consumer or retail tech", "Technical background", "SQL proficiency"],
   },
   "store-manager": {
-    title: "Store Manager", dept: "Retail", location: "Abuja", type: "Full-time",
-    about: "Lead one of our flagship stores in Abuja. You'll manage a team of sales associates, hit revenue targets, and ensure every customer has a world-class in-store experience.",
+    title: "Store Manager", dept: "Retail", location: "Denver, CO", type: "Full-time",
+    about: "Lead one of our flagship stores in Denver. You'll manage a team of sales associates, hit revenue targets, and ensure every customer has a world-class in-store experience.",
     responsibilities: [
       "Manage daily store operations and team of 8–12 associates",
       "Drive sales performance and meet monthly revenue targets",
@@ -74,7 +74,7 @@ const jobDetails: Record<string, {
       "Excellent customer service orientation",
       "Knowledge of electronics products is a plus",
     ],
-    niceToHave: ["Electronics retail experience", "Experience with POS and inventory systems", "Based in Abuja"],
+    niceToHave: ["Electronics retail experience", "Experience with POS and inventory systems", "Based in Denver metro"],
   },
   "customer-experience-lead": {
     title: "Customer Experience Lead", dept: "Support", location: "Remote", type: "Full-time",
@@ -96,7 +96,7 @@ const jobDetails: Record<string, {
     niceToHave: ["E-commerce support experience", "Experience building knowledge bases", "CSAT/NPS optimization experience"],
   },
   "digital-marketing-specialist": {
-    title: "Digital Marketing Specialist", dept: "Marketing", location: "Lagos (Hybrid)", type: "Full-time",
+    title: "Digital Marketing Specialist", dept: "Marketing", location: "Austin, TX (Hybrid)", type: "Full-time",
     about: "Drive customer acquisition and engagement through digital channels. You'll plan, execute, and optimize campaigns across paid, social, email, and content marketing.",
     responsibilities: [
       "Plan and execute digital marketing campaigns across channels",
@@ -112,10 +112,10 @@ const jobDetails: Record<string, {
       "Experience with email marketing platforms",
       "Creative mindset with attention to data",
     ],
-    niceToHave: ["E-commerce marketing experience", "SEO expertise", "Experience in the Nigerian market"],
+    niceToHave: ["E-commerce marketing experience", "SEO expertise", "Experience in consumer electronics retail"],
   },
   "supply-chain-analyst": {
-    title: "Supply Chain Analyst", dept: "Operations", location: "Lagos", type: "Full-time",
+    title: "Supply Chain Analyst", dept: "Operations", location: "Dallas, TX", type: "Full-time",
     about: "Optimize our supply chain to ensure the right products are in the right place at the right time. You'll work with procurement, logistics, and store teams to minimize costs and maximize availability.",
     responsibilities: [
       "Forecast demand and optimize inventory levels across 30+ stores",
@@ -135,7 +135,7 @@ const jobDetails: Record<string, {
   },
   "retail-sales-associate": {
     title: "Retail Sales Associate", dept: "Retail", location: "Multiple Locations", type: "Full-time",
-    about: "Be the face of MediaMall. Help customers find the perfect electronics products while delivering an exceptional in-store experience. Multiple positions available across Nigeria.",
+    about: "Be the face of MediaMall. Help customers find the perfect electronics products while delivering an exceptional in-store experience. Multiple positions available nationwide.",
     responsibilities: [
       "Assist customers with product selection and recommendations",
       "Demonstrate product features and handle customer questions",

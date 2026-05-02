@@ -15,12 +15,12 @@ const benefits = [
 ];
 
 const picks = [
-  { name: "MacBook Air M3", price: "₦1,150,000", img: "💻", slug: "laptops" },
-  { name: "iPad 10th Gen", price: "₦385,000", img: "📱", slug: "phones-tablets" },
-  { name: "Galaxy Tab S9 FE", price: "₦320,000", img: "📱", slug: "phones-tablets" },
-  { name: "Lenovo IdeaPad Slim 3", price: "₦485,000", img: "💻", slug: "laptops" },
-  { name: "AirPods Pro 2", price: "₦185,000", img: "🎧", slug: "audio" },
-  { name: "Logitech MX Keys Mini", price: "₦68,000", img: "⌨️", slug: "accessories" },
+  { name: "MacBook Air M3", price: "$1,099", img: "💻", slug: "laptops" },
+  { name: "iPad 10th Gen", price: "$449", img: "📱", slug: "phones-tablets" },
+  { name: "Galaxy Tab S9 FE", price: "$449", img: "📱", slug: "phones-tablets" },
+  { name: "Lenovo IdeaPad Slim 3", price: "$499", img: "💻", slug: "laptops" },
+  { name: "AirPods Pro 2", price: "$249", img: "🎧", slug: "audio" },
+  { name: "Logitech MX Keys Mini", price: "$99", img: "⌨️", slug: "accessories" },
 ];
 
 const steps = [

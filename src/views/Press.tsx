@@ -8,19 +8,19 @@ import SiteFooter from "@/components/SiteFooter";
 import MobileBottomNav from "@/components/MobileBottomNav";
 
 const pressReleases = [
-  { date: "Feb 2026", title: "MediaMall Surpasses 500,000 Customers Milestone", summary: "Nigeria's leading electronics retailer celebrates half a million customers served across its 30+ store network." },
-  { date: "Jan 2026", title: "MediaMall Launches Same-Day Delivery in Lagos", summary: "New express delivery service promises electronics at your doorstep within hours, available across all Lagos LGAs." },
-  { date: "Nov 2025", title: "Partnership with Samsung: Official Authorized Reseller", summary: "MediaMall becomes Samsung's largest authorized retail partner in West Africa." },
-  { date: "Sep 2025", title: "MediaMall Opens 30th Store in Kano", summary: "Continued expansion brings premium electronics retail to Northern Nigeria's largest commercial city." },
-  { date: "Jul 2025", title: "Student Program Reaches 50,000 Enrollments", summary: "MediaMall's student discount program proves popular across Nigerian universities." },
-  { date: "Apr 2025", title: "B2B Division Records ₦5B in Enterprise Sales", summary: "Corporate and government clients drive growth in MediaMall's business-to-business segment." },
+  { date: "Feb 2026", title: "MediaMall Surpasses 500,000 Customers Milestone", summary: "The retailer marks half a million customers served across its growing store and online network." },
+  { date: "Jan 2026", title: "MediaMall Launches Same-Day Delivery in Major Metro Areas", summary: "Express delivery now reaches more customers with eligible orders fulfilled within hours in select cities." },
+  { date: "Nov 2025", title: "Partnership with Samsung: Official Authorized Reseller", summary: "MediaMall strengthens its Samsung assortment with expanded authorized retail coverage." },
+  { date: "Sep 2025", title: "MediaMall Opens 30th Retail Location", summary: "Continued expansion brings premium electronics retail to more neighborhoods nationwide." },
+  { date: "Jul 2025", title: "Student Program Reaches 50,000 Enrollments", summary: "MediaMall's student discount program continues strong adoption at colleges and universities." },
+  { date: "Apr 2025", title: "B2B Division Records Strong Enterprise Sales Growth", summary: "Corporate and institutional clients drive momentum in MediaMall's business segment." },
 ];
 
 const mediaFeatures = [
-  { outlet: "TechCabal", title: "How MediaMall is Disrupting Electronics Retail in Nigeria", date: "Jan 2026" },
-  { outlet: "BusinessDay", title: "MediaMall CEO on the Future of E-commerce in Africa", date: "Dec 2025" },
-  { outlet: "Guardian Nigeria", title: "Top 10 Nigerian Startups to Watch in 2026", date: "Nov 2025" },
-  { outlet: "Punch", title: "MediaMall's Student Program: A Case Study in Customer Loyalty", date: "Sep 2025" },
+  { outlet: "Tech Retail Weekly", title: "How MediaMall Blends Stores and E‑commerce", date: "Jan 2026" },
+  { outlet: "Commerce Today", title: "MediaMall CEO on the Future of Electronics Retail", date: "Dec 2025" },
+  { outlet: "Startup Chronicle", title: "Retail Tech Brands to Watch in 2026", date: "Nov 2025" },
+  { outlet: "Customer Loyalty Journal", title: "MediaMall's Student Program: A Loyalty Case Study", date: "Sep 2025" },
 ];
 
 const Press = () => (
@@ -65,7 +65,7 @@ const Press = () => (
         <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 text-center">
           <h3 className="text-sm font-bold text-foreground mb-2">Media Inquiries</h3>
           <p className="text-xs text-muted-foreground mb-4">For press inquiries, interviews, or media kit requests, contact our communications team.</p>
-          <p className="text-sm font-semibold text-primary">press@mediamall.ng</p>
+          <p className="text-sm font-semibold text-primary">press@mediamall.com</p>
         </div>
       </section>
     </main>

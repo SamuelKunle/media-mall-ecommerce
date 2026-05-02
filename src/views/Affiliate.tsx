@@ -25,7 +25,7 @@ const steps = [
   { step: "1", title: "Apply Online", desc: "Fill out our simple application form — approval takes 24–48 hours" },
   { step: "2", title: "Get Your Links", desc: "Access your unique referral links, banners, and promotional materials" },
   { step: "3", title: "Share & Earn", desc: "Promote on your blog, YouTube, social media, or email list" },
-  { step: "4", title: "Get Paid", desc: "Receive monthly payouts via bank transfer once you hit ₦10,000 minimum" },
+  { step: "4", title: "Get Paid", desc: "Receive monthly payouts via bank transfer once you hit $100 minimum" },
 ];
 
 const Affiliate = () => (
